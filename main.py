@@ -16,8 +16,15 @@ def page_candidates():
 def page_candidate_id(c_id):
     """Вывод кандидата по ID"""
     candidate = utilit.get_candidate_by_id(c_id)
-    candidates = [candidate]
-    return utilit.build_site_list(candidates)
+
+    page_content = f"img src = {candidate['picture']} \n"
+    page_content += f"<pre>"
+    page_content += f"{candidate['name']} \n"
+    page_content += f"{candidate['position']} \n"
+    page_content += f"{candidate['skills']} \n"
+    page_content += f"</pre>"
+
+    return page_content
 
 
 @app.route("/skill/<skill_name>")
