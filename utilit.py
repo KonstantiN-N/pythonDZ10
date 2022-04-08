@@ -1,5 +1,4 @@
 import json
-from pprint import pprint as pp
 
 
 def load_candidates():
