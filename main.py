@@ -17,7 +17,7 @@ def page_candidate_id(c_id):
     """Вывод кандидата по ID"""
     candidate = utilit.get_candidate_by_id(c_id)
 
-    page_content = f"img src = {candidate['picture']} \n"
+    page_content = f"<img src = {candidate['picture']}> \n"
     page_content += f"<pre>"
     page_content += f"{candidate['name']} \n"
     page_content += f"{candidate['position']} \n"
